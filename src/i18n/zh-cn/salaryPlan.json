@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "salaryPlan" : {
+            "home": {
+                "title": "Salary Plans",
+                "createLabel": "Create a new Salary Plan",
+                "createOrEditLabel": "Create or edit a Salary Plan"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Salary Plan {{ id }}?"
+            },
+            "detail": {
+                "title": "Salary Plan"
+            },
+            "name": "Name",
+            "currency": "Currency",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "planScale": "Plan Scale"
+        }
+    },
+    "esenhrmApp": {
+        "salaryPlan" : {
+            "created": "A new Salary Plan is created with identifier {{ param }}",
+            "updated": "A Salary Plan is updated with identifier {{ param }}",
+            "deleted": "A Salary Plan is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeCertificate" : {
+            "home": {
+                "title": "Employee Certificates",
+                "createLabel": "Create a new Employee Certificate",
+                "createOrEditLabel": "Create or edit a Employee Certificate"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Employee Certificate"
+            },
+            "name": "Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "certificate": "Certificate"
+        }
+    },
+    "esenhrmApp": {
+        "employeeCertificate" : {
+            "created": "A new Employee Certificate is created with identifier {{ param }}",
+            "updated": "A Employee Certificate is updated with identifier {{ param }}",
+            "deleted": "A Employee Certificate is deleted with identifier {{ param }}"
+        }
+    }
+}

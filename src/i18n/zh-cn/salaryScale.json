@@ -1,0 +1,38 @@
+{
+    "esenadminwebhrmApp": {
+        "salaryScale" : {
+            "home": {
+                "title": "Salary Scales",
+                "createLabel": "Create a new Salary Scale",
+                "createOrEditLabel": "Create or edit a Salary Scale"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Salary Scale {{ id }}?"
+            },
+            "detail": {
+                "title": "Salary Scale"
+            },
+            "name": "Name",
+            "description": "Description",
+            "monthSalary": "Month Salary",
+            "yearSalary": "Year Salary",
+            "nextScaleMonths": "Next Scale Months",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "planScale": "Plan Scale",
+            "position": "Position"
+        }
+    },
+    "esenhrmApp": {
+        "salaryScale" : {
+            "created": "A new Salary Scale is created with identifier {{ param }}",
+            "updated": "A Salary Scale is updated with identifier {{ param }}",
+            "deleted": "A Salary Scale is deleted with identifier {{ param }}"
+        }
+    }
+}

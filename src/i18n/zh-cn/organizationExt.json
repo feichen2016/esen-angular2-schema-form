@@ -1,0 +1,47 @@
+{
+  "esenadminwebhrmApp": {
+    "organizationExt": {
+      "title": "企业管理",
+      "home": {
+        "title": "Organization Exts",
+        "createLabel": "Create a new Organization Ext",
+        "createOrEditLabel": "Create or edit a Organization Ext"
+      },
+      "delete": {
+        "question": "确定要删除该条信息吗?"
+      },
+      "detail": {
+        "title": "Organization Ext"
+      },
+      "registeredCapital": "Registered Capital",
+      "registrationAuthority": "Registration Authority",
+      "phone": "Phone",
+      "faxNumber": "Fax Number",
+      "dateOfEstablishment": "Date Of Establishment",
+      "legalPerson": "Legal Person",
+      "scale": "Scale",
+      "webSite": "Web Site",
+      "location": "Location",
+      "zipCode": "Zip Code",
+      "status": "Status",
+      "description": "Description",
+      "email": "Email",
+      "properties": "Properties",
+      "effectiveDate": "Effective Date",
+      "createdBy": "Created By",
+      "createdTime": "Created Time",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedTime": "Last Modified Time",
+      "delFlag": "Del Flag",
+      "version": "Version",
+      "organization": "Organization"
+    }
+  },
+  "esenhrmApp": {
+    "organizationExt": {
+      "created": "A new Organization Ext is created with identifier {{ param }}",
+      "updated": "A Organization Ext is updated with identifier {{ param }}",
+      "deleted": "A Organization Ext is deleted with identifier {{ param }}"
+    }
+  }
+}

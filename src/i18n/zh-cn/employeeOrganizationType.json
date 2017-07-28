@@ -1,0 +1,9 @@
+{
+    "esenadminwebhrmApp": {
+        "EmployeeOrganizationType" : {
+            "null": "",
+            "MANAGER": "MANAGER",
+            "MEMBER": "MEMBER"
+        }
+    }
+}

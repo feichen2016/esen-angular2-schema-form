@@ -1,0 +1,12 @@
+<div *ngIf="schema" class="row">
+    <!--<ng-template ngFor let-item [ngForOf]="schema.orderIds" let-i="index">
+        <label [ngClass]="{'col-xs-12':flag(item),'col-xs-6':!flag(item),'col-md-2':true,'right':true}">{{showTitle(item)}}</label>
+        <div [ngClass]="{'col-xs-12':flag(item),'col-md-10':flag(item),'col-xs-6':!flag(item),'col-md-4':!flag(item)}">{{showLabel(item)}}</div>
+    </ng-template>-->
+    <ng-template ngFor let-item [ngForOf]="schema.orderIds" let-i="index">
+        <div [ngClass]="{'display-flex':true,'form-group':true,'col-12':flag(item),'col-6':!flag(item)}">
+            <label [ngClass]="{'col-2':flag(item),'col-4':!flag(item),'right':true}">{{showTitle(item)}}</label>
+            <div [ngClass]="{'col-10':flag(item),'col-8':!flag(item)}">{{showLabel(item)}}</div>
+        </div>
+    </ng-template>
+</div>

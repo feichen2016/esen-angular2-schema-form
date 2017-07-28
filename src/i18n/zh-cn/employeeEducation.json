@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeEducation" : {
+            "home": {
+                "title": "Employee Educations",
+                "createLabel": "Create a new Employee Education",
+                "createOrEditLabel": "Create or edit a Employee Education"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Employee Education {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee Education"
+            },
+            "name": "Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "education": "Education"
+        }
+    },
+    "esenhrmApp": {
+        "employeeEducation" : {
+            "created": "A new Employee Education is created with identifier {{ param }}",
+            "updated": "A Employee Education is updated with identifier {{ param }}",
+            "deleted": "A Employee Education is deleted with identifier {{ param }}"
+        }
+    }
+}

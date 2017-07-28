@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "competencyScale" : {
+            "home": {
+                "title": "Competency Scales",
+                "createLabel": "Create a new Competency Scale",
+                "createOrEditLabel": "Create or edit a Competency Scale"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Competency Scale"
+            },
+            "name": "Name",
+            "competencyScale": "Competency Scale",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "competency": "Competency"
+        }
+    },
+    "esenhrmApp": {
+        "competencyScale" : {
+            "created": "A new Competency Scale is created with identifier {{ param }}",
+            "updated": "A Competency Scale is updated with identifier {{ param }}",
+            "deleted": "A Competency Scale is deleted with identifier {{ param }}"
+        }
+    }
+}

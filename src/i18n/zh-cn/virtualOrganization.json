@@ -1,0 +1,25 @@
+{
+    "esenadminwebhrmApp": {
+       "virtualOrganization" : {
+            "home": {
+                "title": "虚拟组织管理",
+                "createLabel": "新建虚拟组织",
+                "createOrEditLabel": "新建或修改虚拟组织"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "虚拟组织详情",
+                "tabtitle": "组织信息"
+            }
+        }
+    },
+    "esenhrmApp": {
+        "virtualOrganization" : {
+            "created": "A new Organization is created with identifier {{ param }}",
+            "updated": "A Organization is updated with identifier {{ param }}",
+            "deleted": "A Organization is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "salary" : {
+            "home": {
+                "title": "薪等管理",
+                "createLabel": "新建薪等",
+                "createOrEditLabel": "新建或编辑薪等"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "薪等详情"
+            },
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "competency" : {
+            "created": "A new Competency is created with identifier {{ param }}",
+            "updated": "A Competency is updated with identifier {{ param }}",
+            "deleted": "A Competency is deleted with identifier {{ param }}"
+        }
+    }
+}

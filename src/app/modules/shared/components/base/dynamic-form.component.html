@@ -1,0 +1,16 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="row">
+      <ng-template ngFor let-question [ngForOf]="questions" let-i="index">
+        <df-option [question]="question" [form]="form" class="display-flex form-group col-6"></df-option>
+      </ng-template>
+    </div>
+    <div class="form-row">
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+</div>

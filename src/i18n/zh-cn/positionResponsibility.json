@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "positionResponsibility" : {
+            "home": {
+                "title": "Position Responsibilities",
+                "createLabel": "Create a new Position Responsibility",
+                "createOrEditLabel": "Create or edit a Position Responsibility"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Position Responsibility {{ id }}?"
+            },
+            "detail": {
+                "title": "Position Responsibility"
+            },
+            "mandatory": "Mandatory",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "position": "Position",
+            "fromJobCode": "From Job Code",
+            "responsibility": "Responsibility"
+        }
+    },
+    "esenhrmApp": {
+        "positionResponsibility" : {
+            "created": "A new Position Responsibility is created with identifier {{ param }}",
+            "updated": "A Position Responsibility is updated with identifier {{ param }}",
+            "deleted": "A Position Responsibility is deleted with identifier {{ param }}"
+        }
+    }
+}

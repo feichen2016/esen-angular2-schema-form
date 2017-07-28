@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "skillScale" : {
+            "home": {
+                "title": "Skill Scales",
+                "createLabel": "Create a new Skill Scale",
+                "createOrEditLabel": "Create or edit a Skill Scale"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Skill Scale {{ id }}?"
+            },
+            "detail": {
+                "title": "Skill Scale"
+            },
+            "name": "Name",
+            "skillScale": "Skill Scale",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "skill": "Skill"
+        }
+    },
+    "esenhrmApp": {
+        "skillScale" : {
+            "created": "A new Skill Scale is created with identifier {{ param }}",
+            "updated": "A Skill Scale is updated with identifier {{ param }}",
+            "deleted": "A Skill Scale is deleted with identifier {{ param }}"
+        }
+    }
+}

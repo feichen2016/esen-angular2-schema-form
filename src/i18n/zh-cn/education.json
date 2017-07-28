@@ -1,0 +1,38 @@
+{
+    "esenadminwebhrmApp": {
+        "education" : {
+            "home": {
+                "title": "Educations",
+                "createLabel": "Create a new Education",
+                "createOrEditLabel": "Create or edit a Education"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Education"
+            },
+            "name": "Name",
+            "description": "Description",
+            "unit": "Unit",
+            "major": "Major",
+            "certificate": "Certificate",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "education" : {
+            "created": "A new Education is created with identifier {{ param }}",
+            "updated": "A Education is updated with identifier {{ param }}",
+            "deleted": "A Education is deleted with identifier {{ param }}"
+        }
+    }
+}

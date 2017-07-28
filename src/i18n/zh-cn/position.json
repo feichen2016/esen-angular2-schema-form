@@ -1,0 +1,42 @@
+{
+    "esenadminwebhrmApp": {
+        "position" : {
+            "home": {
+                "title": "职位管理",
+                "createLabel": "新建职位",
+                "createOrEditLabel": "新建或更新职位"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "职位详情"
+            },
+            "name": "Name",
+            "shortName": "Short Name",
+            "department": "Department",
+            "code": "Code",
+            "managerScale": "Manager Scale",
+            "timeliness": "Timeliness",
+            "numberOfPeople": "Number Of People",
+            "category": "Category",
+            "description": "Description",
+            "keyPost": "Key Post",
+            "property": "Property",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "position" : {
+            "created": "A new Position is created with identifier {{ param }}",
+            "updated": "A Position is updated with identifier {{ param }}",
+            "deleted": "A Position is deleted with identifier {{ param }}"
+        }
+    }
+}

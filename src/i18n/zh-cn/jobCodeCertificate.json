@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "jobCodeCertificate" : {
+            "home": {
+                "title": "Job Code Certificates",
+                "createLabel": "Create a new Job Code Certificate",
+                "createOrEditLabel": "Create or edit a Job Code Certificate"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Job Code Certificate {{ id }}?"
+            },
+            "detail": {
+                "title": "Job Code Certificate"
+            },
+            "mandatory": "Mandatory",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "jobCode": "Job Code",
+            "certificate": "Certificate"
+        }
+    },
+    "esenhrmApp": {
+        "jobCodeCertificate" : {
+            "created": "A new Job Code Certificate is created with identifier {{ param }}",
+            "updated": "A Job Code Certificate is updated with identifier {{ param }}",
+            "deleted": "A Job Code Certificate is deleted with identifier {{ param }}"
+        }
+    }
+}

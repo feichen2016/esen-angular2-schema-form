@@ -1,0 +1,38 @@
+{
+    "esenadminwebhrmApp": {
+        "location" : {
+            "home": {
+                "title": "Locations",
+                "createLabel": "Create a new Location",
+                "createOrEditLabel": "Create or edit a Location"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Location {{ id }}?"
+            },
+            "detail": {
+                "title": "Location"
+            },
+            "code": "Code",
+            "province": "Province",
+            "city": "City",
+            "district": "District",
+            "detailsLocation": "Details Location",
+            "status": "Status",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "location" : {
+            "created": "A new Location is created with identifier {{ param }}",
+            "updated": "A Location is updated with identifier {{ param }}",
+            "deleted": "A Location is deleted with identifier {{ param }}"
+        }
+    }
+}

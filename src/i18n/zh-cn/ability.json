@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "ability" : {
+            "home": {
+                "title": "能力管理",
+                "createLabel": "新建能力",
+                "createOrEditLabel": "新建或编辑能力"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗??"
+            },
+            "detail": {
+                "title": "能力详情"
+            },
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "competency" : {
+            "created": "A new Competency is created with identifier {{ param }}",
+            "updated": "A Competency is updated with identifier {{ param }}",
+            "deleted": "A Competency is deleted with identifier {{ param }}"
+        }
+    }
+}

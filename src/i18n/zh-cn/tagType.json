@@ -1,0 +1,9 @@
+{
+    "esenadminwebhrmApp": {
+        "TagType" : {
+            "null": "",
+            "PERSONAL": "PERSONAL",
+            "TECHNOLOGICAL": "TECHNOLOGICAL"
+        }
+    }
+}

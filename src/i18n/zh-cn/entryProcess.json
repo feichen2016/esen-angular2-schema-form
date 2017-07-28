@@ -1,0 +1,37 @@
+{
+    "esenadminwebhrmApp": {
+        "process" : {
+            "home": {
+                "title": "入职流程模板",
+                "createLabel": "新建入职流程",
+                "createOrEditLabel": "新建或编辑入职流程模板"
+            },
+            "delete": {
+                "question": "删除后该信息将从列表消失，您确定要删除吗？"
+            },
+            "detail": {
+                "title": "模板详情"
+            },
+            "status":"状态",
+            "description":"描述",
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "competency" : {
+            "created": "A new Competency is created with identifier {{ param }}",
+            "updated": "A Competency is updated with identifier {{ param }}",
+            "deleted": "A Competency is deleted with identifier {{ param }}"
+        }
+    }
+}

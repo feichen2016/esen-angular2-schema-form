@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "positionSkill" : {
+            "home": {
+                "title": "Position Skills",
+                "createLabel": "Create a new Position Skill",
+                "createOrEditLabel": "Create or edit a Position Skill"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Position Skill {{ id }}?"
+            },
+            "detail": {
+                "title": "Position Skill"
+            },
+            "mandatory": "Mandatory",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "position": "Position",
+            "fromJobCode": "From Job Code",
+            "skillScale": "Skill Scale"
+        }
+    },
+    "esenhrmApp": {
+        "positionSkill" : {
+            "created": "A new Position Skill is created with identifier {{ param }}",
+            "updated": "A Position Skill is updated with identifier {{ param }}",
+            "deleted": "A Position Skill is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "positionCertificate" : {
+            "home": {
+                "title": "Position Certificates",
+                "createLabel": "Create a new Position Certificate",
+                "createOrEditLabel": "Create or edit a Position Certificate"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Position Certificate {{ id }}?"
+            },
+            "detail": {
+                "title": "Position Certificate"
+            },
+            "mandatory": "Mandatory",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "position": "Position",
+            "fromJobCode": "From Job Code",
+            "certificate": "Certificate"
+        }
+    },
+    "esenhrmApp": {
+        "positionCertificate" : {
+            "created": "A new Position Certificate is created with identifier {{ param }}",
+            "updated": "A Position Certificate is updated with identifier {{ param }}",
+            "deleted": "A Position Certificate is deleted with identifier {{ param }}"
+        }
+    }
+}

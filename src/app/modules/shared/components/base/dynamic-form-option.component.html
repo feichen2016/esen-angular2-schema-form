@@ -1,0 +1,17 @@
+<div [formGroup]="form" class="display-flex form-group col-12">
+  <label class="col-4 right" [attr.for]="question.key">{{question.label}}</label>
+
+  <div class="col-8" [ngSwitch]="question.controlType">
+
+    <input *ngSwitchCase="'textbox'" [formControlName]="question.key"
+            [id]="question.key" [type]="question.type">
+
+    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.value">{{opt.key}}</option>
+    </select>
+
+    <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+  </div>
+
+</div>
+

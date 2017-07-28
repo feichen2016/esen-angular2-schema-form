@@ -1,0 +1,7 @@
+{
+    "*": {
+        "target": "http://192.168.1.9:9091",
+        "secure": false,
+        "loglevel": "debug"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "responsibility" : {
+            "home": {
+                "title": "Responsibilities",
+                "createLabel": "Create a new Responsibility",
+                "createOrEditLabel": "Create or edit a Responsibility"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Responsibility {{ id }}?"
+            },
+            "detail": {
+                "title": "Responsibility"
+            },
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "responsibility" : {
+            "created": "A new Responsibility is created with identifier {{ param }}",
+            "updated": "A Responsibility is updated with identifier {{ param }}",
+            "deleted": "A Responsibility is deleted with identifier {{ param }}"
+        }
+    }
+}

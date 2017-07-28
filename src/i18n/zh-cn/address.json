@@ -1,0 +1,40 @@
+{
+    "jhipsterApp": {
+        "address" : {
+            "home": {
+                "title": "Addresses",
+                "createLabel": "Create a new Address",
+                "createOrEditLabel": "Create or edit a Address"
+            },
+            "created": "A new Address is created with identifier {{ param }}",
+            "updated": "A Address is updated with identifier {{ param }}",
+            "deleted": "A Address is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Address {{ id }}?"
+            },
+            "detail": {
+                "title": "Address"
+            },
+            "category": "Category",
+            "code": "Code",
+            "province": "Province",
+            "city": "City",
+            "district": "District",
+            "zipcode": "Zipcode",
+            "provinceName": "Province Name",
+            "cityName": "City Name",
+            "districtName": "District Name",
+            "detailAddress": "Detail Address",
+            "status": "Status",
+            "description": "Description",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "contacts": "Contacts",
+            "customer": "Customer"
+        }
+    }
+}

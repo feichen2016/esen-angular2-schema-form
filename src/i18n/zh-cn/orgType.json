@@ -1,0 +1,9 @@
+{
+    "esenadminwebhrmApp": {
+        "OrgType" : {
+            "null": "",
+            "COMPANY": "COMPANY",
+            "DEPARTMENT": "DEPARTMENT"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "esenadminwebhrmApp": {
+        "emergencyContacts" : {
+            "home": {
+                "title": "Emergency Contacts",
+                "createLabel": "Create a new Emergency Contacts",
+                "createOrEditLabel": "Create or edit a Emergency Contacts"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Emergency Contacts"
+            },
+            "name": "Name",
+            "relationship": "Relationship",
+            "mobile": "Mobile",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "location": "Location",
+            "employee": "Employee"
+        }
+    },
+    "esenhrmApp": {
+        "emergencyContacts" : {
+            "created": "A new Emergency Contacts is created with identifier {{ param }}",
+            "updated": "A Emergency Contacts is updated with identifier {{ param }}",
+            "deleted": "A Emergency Contacts is deleted with identifier {{ param }}"
+        }
+    }
+}

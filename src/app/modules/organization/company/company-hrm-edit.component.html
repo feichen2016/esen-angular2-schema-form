@@ -1,0 +1,235 @@
+<form name="editForm" class="general-edit" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+  <esen-alert-error></esen-alert-error>
+  <div class="form-group">
+    <button type="button" class="btn btn-default" (click)="previousState()" style="float:right;margin-left:10px">
+            <span class="fa fa-ban"></span><span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+    <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary" style="float:right">
+            <span class="fa fa-save"></span><span jhiTranslate="entity.action.save">Save</span>
+        </button>
+  </div>
+  <div class="title" id="myDepartmentLabel" jhiTranslate="esenadminwebhrmApp.organization.home.createOrEditLabel">Create or edit a Department</div>
+  <ngb-tabset>
+    <ngb-tab>
+      <ng-template ngbTabTitle><span jhiTranslate="esenadminwebhrmApp.organization.detail.tabtitle">Company Info</span></ng-template>
+      <ng-template ngbTabContent>
+        <div class="content">
+          <div class="row">
+            <div class="line col-6">
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.parent" for="parentId">Parent</label>
+                <div class="input-group col-8">
+                  <input id="parentName" class="form-control" name="parentName" [(ngModel)]="company.parentName" readonly/>
+                  <!-- <span *ngIf="company.parentName" class="input-group-btn">
+                    <button class="btn btn-ss" type="button" (click)="company.parentName=null;company.parentId=null"><i class="fa fa-remove"></i></button>
+                  </span>
+                  <span class="input-group-btn">
+                    <button id="parentButton" type="button" class="btn" (click)="openParent()">
+                    <i class="fa fa-search"></i></button>
+                  </span> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.companyNo" for="field_companyNo">companyNo</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="companyNo" id="field_companyNo" [(ngModel)]="company.companyNo" maxlength="20">
+                  <div [hidden]="!(editForm.controls.companyNo?.dirty && editForm.controls.companyNo?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.companyNo?.errors?.required" jhiTranslate="entity.validation.required">
+                      This field is required.
+                    </small>
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.companyNo?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 20 }">
+                      This field cannot be longer than 20 characters.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.registeredCapital" for="field_registeredCapital">Registered Capital</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="registeredCapital" id="field_registeredCapital" [(ngModel)]="company.registeredCapital"
+                    maxlength="64">
+                  <div [hidden]="!(editForm.controls.registeredCapital?.dirty && editForm.controls.registeredCapital?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.registeredCapital?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 64 }">
+                      This field cannot be longer than 64 characters.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.registrationAuthority" for="field_registrationAuthority">Registration Authority</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="registrationAuthority" id="field_registrationAuthority" [(ngModel)]="company.registrationAuthority"
+                    maxlength="255">
+                  <div [hidden]="!(editForm.controls.registrationAuthority?.dirty && editForm.controls.registrationAuthority?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.registrationAuthority?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 255 }">
+                      This field cannot be longer than 255 characters.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.phone" for="field_phone">Phone</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="phone" id="field_phone" [(ngModel)]="company.phone" required maxlength="20"
+                    #phone="ngModel">
+                  <div [hidden]="phone.valid || phone.pristine" class="alert alert-danger">
+                    联系电话必须填写！
+                  </div>
+                  <!--<div *ngIf="phone.errors?.number" class="alert alert-danger">联系电话必须为数字！</div>                      
+                      <div *ngIf="phone.errors?.rangeLength" class="alert alert-danger">联系电话为11位！</div> -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.faxNumber" for="field_faxNumber">Fax Number</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="faxNumber" id="field_faxNumber" [(ngModel)]="company.faxNumber" maxlength="20">
+                  <div [hidden]="!(editForm.controls.faxNumber?.dirty && editForm.controls.faxNumber?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.faxNumber?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 20 }">
+                    This field cannot be longer than 20 characters.
+                  </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.properties" for="field_properties">Properties</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="properties" id="field_properties" [(ngModel)]="company.properties" maxlength="20">
+                  <div [hidden]="!(editForm.controls.properties?.dirty && editForm.controls.properties?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.properties?.errors?.required" jhiTranslate="entity.validation.required">
+                    This field is required.
+                  </small>
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.properties?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 20 }">
+                    This field cannot be longer than 20 characters.
+                  </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.dateOfEstablishment" for="field_dateOfEstablishment">Date Of Establishment</label>
+                <!-- <div class="d-flex"> -->
+                <div class="col-8">
+                  <my-date-picker id="dateOfEstablishment" name="organization.dateOfEstablishment" [options]="myDatePickerOptions" [(ngModel)]="company.dateOfEstablishment"
+                    required></my-date-picker>
+                  <!--<input id="field_dateOfEstablishment" type="text" class="" name="dateOfEstablishment" [(ngModel)]="organization.dateOfEstablishment"
+                          ngbDatepicker #effectiveDateDp="ngbDatepicker" required (click)="effectiveDateDp.toggle()">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" (click)="effectiveDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                      </span>-->
+                  <!-- </div> -->
+                  <div [hidden]="!(editForm.controls.dateOfEstablishment?.dirty && editForm.controls.dateOfEstablishment?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.dateOfEstablishment?.errors?.required" jhiTranslate="entity.validation.required">
+                      This field is required.
+                    </small>
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.dateOfEstablishment?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                      This field should be a date and time.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line col-6">
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.name" for="field_name">Name</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="name" id="field_name" [(ngModel)]="company.name" required #name="ngModel">
+                  <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    公司名称必须填写！
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.legalPerson" for="field_legalPerson">Legal Person</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="legalPerson" id="field_legalPerson" [(ngModel)]="company.legalPerson" required
+                    maxlength="64" #legalPerson="ngModel">
+                  <div [hidden]="legalPerson.valid || legalPerson.pristine" class="alert alert-danger">
+                    法人必须填写！
+                  </div>
+                  <!--<div [hidden]="!(editForm.controls.legalPerson?.dirty && editForm.controls.legalPerson?.invalid)">
+                      <small class="form-text text-danger" [hidden]="!editForm.controls.legalPerson?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                        translateValues="{ max: 64 }">
+                        This field cannot be longer than 64 characters.
+                      </small>
+                    </div>-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.scale" for="field_scale">Scale</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="scale" id="field_scale" [(ngModel)]="company.scale" maxlength="64">
+                  <div [hidden]="!(editForm.controls.scale?.dirty && editForm.controls.scale?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.scale?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 64 }">
+                      This field cannot be longer than 64 characters.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.webSite" for="field_webSite">Web Site</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="webSite" id="field_webSite" [(ngModel)]="company.webSite" maxlength="100" #webSite="ngModel">
+                  <!--<div *ngIf="webSite.errors?.url" class="alert alert-danger">请输入正确的网络地址！例如：http://www.baidu.com</div>         -->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.email" for="field_email">Email</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="email" id="field_email" [(ngModel)]="company.email" #email="ngModel" email>
+                  <div [hidden]="!email.errors?.email || email.pristine" class="alert alert-danger">
+                    邮箱格式不正确！
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.location" for="field_location">Location</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="location" id="field_location" [(ngModel)]="company.location" maxlength="255">
+                  <div [hidden]="!(editForm.controls.location?.dirty && editForm.controls.location?.invalid)">
+                    <small class="form-text text-danger" [hidden]="!editForm.controls.location?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                      translateValues="{ max: 255 }">
+                      This field cannot be longer than 255 characters.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.zipCode" for="field_zipCode">Zip Code</label>
+                <div class="col-8">
+                  <input type="text" class="form-control" name="zipCode" id="field_zipCode" [(ngModel)]="company.zipCode" maxlength="40" #zipCode="ngModel"
+                    number>
+                  <div *ngIf="zipCode.errors?.number" class="alert alert-danger">邮编号码为数字！</div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.status" for="field_status">Status</label>
+                <div class="col-8">
+                  <select id="field_status" class="" name="status" [(ngModel)]="company.status" required>
+                    <option value="1" selected>有效</option>
+                    <option value="0">无效</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label col-4" jhiTranslate="esenadminwebhrmApp.organization.description" for="field_description">Description</label>
+            <textarea class="form-control" name="description" id="field_description" [(ngModel)]="company.description" maxlength="1000"
+              rows="5"></textarea>
+            <div [hidden]="!(editForm.controls.description?.dirty && editForm.controls.description?.invalid)">
+              <small class="form-text text-danger" [hidden]="!editForm.controls.description?.errors?.maxlength" jhiTranslate="entity.validation.maxlength"
+                translateValues="{ max: 1000 }">
+                This field cannot be longer than 1000 characters.
+            </small>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</form>

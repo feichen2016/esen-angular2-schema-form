@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeSkill" : {
+            "home": {
+                "title": "Employee Skills",
+                "createLabel": "Create a new Employee Skill",
+                "createOrEditLabel": "Create or edit a Employee Skill"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Employee Skill {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee Skill"
+            },
+            "name": "Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "skill": "Skill"
+        }
+    },
+    "esenhrmApp": {
+        "employeeSkill" : {
+            "created": "A new Employee Skill is created with identifier {{ param }}",
+            "updated": "A Employee Skill is updated with identifier {{ param }}",
+            "deleted": "A Employee Skill is deleted with identifier {{ param }}"
+        }
+    }
+}

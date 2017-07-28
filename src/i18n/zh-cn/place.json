@@ -1,0 +1,55 @@
+{
+    "esenadminwebhrmApp": {
+       "place" : {
+            "home": {
+                "title": "地点管理",
+                "createLabel": "新建地点",
+                "createOrEditLabel": "新建或修改地点"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "地点管理",
+                "tabtitle": "地点信息",
+                "tabtitle2": "财务信息"
+            },
+            "type": "类型",
+            "name": "地点名称",
+            "code": "Code",
+            "logoUrl": "Logo Url",
+            "status": "状态",
+            "description": "地点描述",
+            "companyNo": "地点编码",
+            "effectiveDate": "生效日期",
+            "lastModifiedBy": "更新人",
+            "lastModifiedTime": "更新时间",
+            "createdBy": "创建人",
+            "createdTime": "创建时间",
+            "delFlag": "状态",
+            "version": "版本",
+            "location": "公司地址",
+            "organization": "Organization",
+            "children": "Children",
+            "parent": "上级组织",
+            "registeredCapital": "注册资金",
+            "registrationAuthority": "注册机构",
+            "phone": "联系电话",
+            "faxNumber": "传真号码",
+            "dateOfEstablishment": "成立日期",
+            "scale": "公司规模",
+            "webSite": "公司网站",
+            "zipCode": "公司邮编",
+            "email": "公司邮箱",
+            "properties": "公司性质",
+            "legalPerson": "法人"
+        }
+    },
+    "esenhrmApp": {
+        "department" : {
+            "created": "A new Organization is created with identifier {{ param }}",
+            "updated": "A Organization is updated with identifier {{ param }}",
+            "deleted": "A Organization is deleted with identifier {{ param }}"
+        }
+    }
+}

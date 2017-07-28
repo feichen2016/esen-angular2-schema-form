@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeCompetency" : {
+            "home": {
+                "title": "Employee Competencies",
+                "createLabel": "Create a new Employee Competency",
+                "createOrEditLabel": "Create or edit a Employee Competency"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Employee Competency"
+            },
+            "name": "Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "competency": "Competency"
+        }
+    },
+    "esenhrmApp": {
+        "employeeCompetency" : {
+            "created": "A new Employee Competency is created with identifier {{ param }}",
+            "updated": "A Employee Competency is updated with identifier {{ param }}",
+            "deleted": "A Employee Competency is deleted with identifier {{ param }}"
+        }
+    }
+}

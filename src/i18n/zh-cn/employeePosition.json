@@ -1,0 +1,60 @@
+{
+    "esenadminwebhrmApp": {
+        "employeePosition" : {
+            "home": {
+                "title": "员工职务管理",
+                "createLabel": "新建员工职务",
+                "createOrEditLabel": "新建或修改员工职务",
+                "addEmployeeContract": "添加员工合同"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "员工"
+            },
+            "userId": "User Id",
+            "avator": "Avator",
+            "employeeNo": "Employee No",
+            "name": "Name",
+            "gender": "Gender",
+            "idCardNo": "Id Card No",
+            "birthday": "Birthday",
+            "nationality": "Nationality",
+            "registrationCategory": "Registration Category",
+            "faith": "Faith",
+            "politics": "Politics",
+            "livingLocation": "Living Location",
+            "memo": "Memo",
+            "reportManager": "Report Manager",
+            "status": "Status",
+            "companyEmail": "Company Email",
+            "homePhone": "Home Phone",
+            "workPhone": "Work Phone",
+            "mobile": "Mobile",
+            "personalEmail": "Personal Email",
+            "qq": "Qq",
+            "wx": "Wx",
+            "personalSignature": "Personal Signature",
+            "field1": "Field 1",
+            "field2": "Field 2",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "location": "Location",
+            "emergencyContacts": "Emergency Contacts",
+            "position": "Position"
+        }
+    },
+    "esenhrmApp": {
+        "employee" : {
+            "created": "A new Employee is created with identifier {{ param }}",
+            "updated": "A Employee is updated with identifier {{ param }}",
+            "deleted": "A Employee is deleted with identifier {{ param }}"
+        }
+    }
+}

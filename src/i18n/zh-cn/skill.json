@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "skill" : {
+            "home": {
+                "title": "技能管理",
+                "createLabel": "新建技能",
+                "createOrEditLabel": "新建或编辑技能"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "技能详情"
+            },
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "skill" : {
+            "created": "A new Skill is created with identifier {{ param }}",
+            "updated": "A Skill is updated with identifier {{ param }}",
+            "deleted": "A Skill is deleted with identifier {{ param }}"
+        }
+    }
+}

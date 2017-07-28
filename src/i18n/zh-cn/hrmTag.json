@@ -1,0 +1,35 @@
+{
+    "esenadminwebhrmApp": {
+        "hrmTag" : {
+            "home": {
+                "title": "Hrm Tags",
+                "createLabel": "Create a new Hrm Tag",
+                "createOrEditLabel": "Create or edit a Hrm Tag"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Hrm Tag"
+            },
+            "name": "Name",
+            "type": "Type",
+            "color": "Color",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "hrmTag" : {
+            "created": "A new Hrm Tag is created with identifier {{ param }}",
+            "updated": "A Hrm Tag is updated with identifier {{ param }}",
+            "deleted": "A Hrm Tag is deleted with identifier {{ param }}"
+        }
+    }
+}

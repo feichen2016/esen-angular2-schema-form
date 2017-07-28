@@ -1,0 +1,26 @@
+.general-edit {
+  padding: 30px;
+  .title {
+    color: #A6A6A6;
+    font-size: 20px;
+  }
+  .tabs {
+    margin-top: 30px;
+  }
+  .content {
+    padding-top: 40px;
+    .line {
+      width: 30%;
+      label {
+        text-align: right;
+      }
+      input {
+        max-width: 370px;
+      }
+      .input-group {
+        display: inline;
+        span {}
+      }
+    }
+  }
+}

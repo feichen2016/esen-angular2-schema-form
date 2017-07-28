@@ -1,0 +1,43 @@
+{
+    "esenadminwebhrmApp": {
+        "jobCode" : {
+            "home": {
+                "title": "Job Codes",
+                "createLabel": "Create a new Job Code",
+                "createOrEditLabel": "Create or edit a Job Code"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Job Code {{ id }}?"
+            },
+            "detail": {
+                "title": "Job Code"
+            },
+            "name": "Name",
+            "shortName": "Short Name",
+            "code": "Code",
+            "managerScale": "Manager Scale",
+            "timeliness": "Timeliness",
+            "numberOfPeople": "Number Of People",
+            "category": "Category",
+            "description": "Description",
+            "keyPost": "Key Post",
+            "property": "Property",
+            "businessDept": "Business Dept",
+            "classesSeq": "Classes Seq",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "jobCode" : {
+            "created": "A new Job Code is created with identifier {{ param }}",
+            "updated": "A Job Code is updated with identifier {{ param }}",
+            "deleted": "A Job Code is deleted with identifier {{ param }}"
+        }
+    }
+}

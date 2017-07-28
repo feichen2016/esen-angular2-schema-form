@@ -1,0 +1,28 @@
+{
+    "esenadminwebhrmApp": {
+        "account" : {
+            "home": {
+                "title": "账号管理",
+                "createLabel": "新建账号",
+                "createOrEditLabel": "新建账号"
+            },
+            "delete": {
+                "question": "删除后该信息将从列表信息中消失，您确定要删除吗??"
+            },
+            "detail": {
+                "title": "账号详情"
+            },
+            "name": "Name",
+            "code": "Code",
+            "category": "Category",
+            "description": "Description",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    }
+}

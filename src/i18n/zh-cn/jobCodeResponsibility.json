@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "jobCodeResponsibility" : {
+            "home": {
+                "title": "Job Code Responsibilities",
+                "createLabel": "Create a new Job Code Responsibility",
+                "createOrEditLabel": "Create or edit a Job Code Responsibility"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Job Code Responsibility {{ id }}?"
+            },
+            "detail": {
+                "title": "Job Code Responsibility"
+            },
+            "mandatory": "Mandatory",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "jobCode": "Job Code",
+            "responsibility": "Responsibility"
+        }
+    },
+    "esenhrmApp": {
+        "jobCodeResponsibility" : {
+            "created": "A new Job Code Responsibility is created with identifier {{ param }}",
+            "updated": "A Job Code Responsibility is updated with identifier {{ param }}",
+            "deleted": "A Job Code Responsibility is deleted with identifier {{ param }}"
+        }
+    }
+}

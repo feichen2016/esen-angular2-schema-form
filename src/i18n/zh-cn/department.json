@@ -1,0 +1,58 @@
+{
+    "esenadminwebhrmApp": {
+        "department": {
+            "home": {
+                "title": "部门管理",
+                "createLabel": "新建部门",
+                "createOrEditLabel": "新建或修改部门"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "部门管理",
+                "tabtitle": "部门信息",
+                "tabtitle2": "财务信息"
+            },
+            "id": "序号",
+            "type": "类型",
+            "name": "部门名称",
+            "code": "Code",
+            "logoUrl": "Logo Url",
+            "status": "状态",
+            "belong": "所属公司",
+            "description": "部门描述",
+            "companyNo": "部门编码",
+            "jingli": "部门经理",
+            "effectiveDate": "生效日期",
+            "lastModifiedBy": "更新人",
+            "lastModifiedTime": "更新时间",
+            "createdBy": "创建人",
+            "createdTime": "创建时间",
+            "delFlag": "状态",
+            "version": "版本",
+            "location": "公司地址",
+            "organization": "Organization",
+            "children": "Children",
+            "parent": "上级组织",
+            "registeredCapital": "注册资金",
+            "registrationAuthority": "注册机构",
+            "phone": "联系电话",
+            "faxNumber": "传真号码",
+            "dateOfEstablishment": "成立日期",
+            "scale": "公司规模",
+            "webSite": "公司网站",
+            "zipCode": "公司邮编",
+            "email": "公司邮箱",
+            "properties": "公司性质",
+            "legalPerson": "法人"
+        }
+    },
+    "esenhrmApp": {
+        "department": {
+            "created": "A new Organization is created with identifier {{ param }}",
+            "updated": "A Organization is updated with identifier {{ param }}",
+            "deleted": "A Organization is deleted with identifier {{ param }}"
+        }
+    }
+}

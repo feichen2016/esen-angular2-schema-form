@@ -1,0 +1,66 @@
+{
+    "esenadminwebhrmApp": {
+        "employee" : {
+            "home": {
+                "title": "人员管理",
+                "createLabel": "新建人员",
+                "createOrEditLabel": "新建或修改人员",
+                 "addEmployeeContract": "添加员工合同"
+            },
+            "employeePosition":{
+                "title": "人员职务信息",
+                "createLabel": "新建职务信息",
+                "createOrEditLabel": "新建或修改职务信息"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "positionTitle": "职务信息详情",
+                "title": "员工"
+            },
+            "userId": "User Id",
+            "avator": "Avator",
+            "employeeNo": "Employee No",
+            "name": "Name",
+            "gender": "Gender",
+            "idCardNo": "Id Card No",
+            "birthday": "Birthday",
+            "nationality": "Nationality",
+            "registrationCategory": "Registration Category",
+            "faith": "Faith",
+            "politics": "Politics",
+            "livingLocation": "Living Location",
+            "memo": "Memo",
+            "reportManager": "Report Manager",
+            "status": "Status",
+            "companyEmail": "Company Email",
+            "homePhone": "Home Phone",
+            "workPhone": "Work Phone",
+            "mobile": "Mobile",
+            "personalEmail": "Personal Email",
+            "qq": "Qq",
+            "wx": "Wx",
+            "personalSignature": "Personal Signature",
+            "field1": "Field 1",
+            "field2": "Field 2",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "location": "Location",
+            "emergencyContacts": "Emergency Contacts",
+            "position": "Position"
+        }
+    },
+    "esenhrmApp": {
+        "employee" : {
+            "created": "A new Employee is created with identifier {{ param }}",
+            "updated": "A Employee is updated with identifier {{ param }}",
+            "deleted": "A Employee is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "esenadminwebhrmApp": {
+        "employeePositionExt" : {
+            "home": {
+                "title": "Employee Position Exts",
+                "createLabel": "Create a new Employee Position Ext",
+                "createOrEditLabel": "Create or edit a Employee Position Ext"
+            },
+            "delete": {
+                "question": "确定要删除该条信息吗?"
+            },
+            "detail": {
+                "title": "Employee Position Ext"
+            },
+            "operationReason": "Operation Reason",
+            "jobCodeName": "Job Code Name",
+            "parentJobCodeName": "Parent Job Code Name",
+            "parentChargePerson": "Parent Charge Person",
+            "jobCodeCategory": "Job Code Category",
+            "positionName": "Position Name",
+            "parentPositionName": "Parent Position Name",
+            "managerScale": "Manager Scale",
+            "timeliness": "Timeliness",
+            "businessCardName": "Business Card Name",
+            "memo": "Memo",
+            "property": "Property",
+            "businessDept": "Business Dept",
+            "salaryPayment": "Salary Payment",
+            "defaultSalaryPlan": "Default Salary Plan",
+            "defaultPosition": "Default Position",
+            "primaryPosition": "Primary Position",
+            "hrStatus": "Hr Status",
+            "status": "Status",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "position": "Position",
+            "jobCode": "Job Code",
+            "location": "Location",
+            "salaryScale": "Salary Scale",
+            "employee": "Employee",
+            "organization": "Organization"
+        }
+    },
+    "esenhrmApp": {
+        "employeePositionExt" : {
+            "created": "A new Employee Position Ext is created with identifier {{ param }}",
+            "updated": "A Employee Position Ext is updated with identifier {{ param }}",
+            "deleted": "A Employee Position Ext is deleted with identifier {{ param }}"
+        }
+    }
+}

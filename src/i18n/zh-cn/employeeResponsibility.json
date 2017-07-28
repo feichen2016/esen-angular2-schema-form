@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeResponsibility" : {
+            "home": {
+                "title": "Employee Responsibilities",
+                "createLabel": "Create a new Employee Responsibility",
+                "createOrEditLabel": "Create or edit a Employee Responsibility"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Employee Responsibility {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee Responsibility"
+            },
+            "name": "Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "responsibility": "Responsibility"
+        }
+    },
+    "esenhrmApp": {
+        "employeeResponsibility" : {
+            "created": "A new Employee Responsibility is created with identifier {{ param }}",
+            "updated": "A Employee Responsibility is updated with identifier {{ param }}",
+            "deleted": "A Employee Responsibility is deleted with identifier {{ param }}"
+        }
+    }
+}

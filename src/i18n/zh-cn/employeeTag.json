@@ -1,0 +1,33 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeTag" : {
+            "home": {
+                "title": "Employee Tags",
+                "createLabel": "Create a new Employee Tag",
+                "createOrEditLabel": "Create or edit a Employee Tag"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Employee Tag {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee Tag"
+            },
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee",
+            "tag": "Tag"
+        }
+    },
+    "esenhrmApp": {
+        "employeeTag" : {
+            "created": "A new Employee Tag is created with identifier {{ param }}",
+            "updated": "A Employee Tag is updated with identifier {{ param }}",
+            "deleted": "A Employee Tag is deleted with identifier {{ param }}"
+        }
+    }
+}

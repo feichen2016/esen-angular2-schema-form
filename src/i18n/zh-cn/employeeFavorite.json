@@ -1,0 +1,31 @@
+{
+    "esenadminwebhrmApp": {
+        "employeeFavorite" : {
+            "home": {
+                "title": "Employee Favorites",
+                "createLabel": "Create a new Employee Favorite",
+                "createOrEditLabel": "Create or edit a Employee Favorite"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Employee Favorite {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee Favorite"
+            },
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "employee": "Employee"
+        }
+    },
+    "esenhrmApp": {
+        "employeeFavorite" : {
+            "created": "A new Employee Favorite is created with identifier {{ param }}",
+            "updated": "A Employee Favorite is updated with identifier {{ param }}",
+            "deleted": "A Employee Favorite is deleted with identifier {{ param }}"
+        }
+    }
+}

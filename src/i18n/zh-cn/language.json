@@ -1,0 +1,34 @@
+{
+    "esenadminwebhrmApp": {
+        "language" : {
+            "home": {
+                "title": "Languages",
+                "createLabel": "Create a new Language",
+                "createOrEditLabel": "Create or edit a Language"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Language {{ id }}?"
+            },
+            "detail": {
+                "title": "Language"
+            },
+            "name": "Name",
+            "description": "Description",
+            "grade": "Grade",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version"
+        }
+    },
+    "esenhrmApp": {
+        "language" : {
+            "created": "A new Language is created with identifier {{ param }}",
+            "updated": "A Language is updated with identifier {{ param }}",
+            "deleted": "A Language is deleted with identifier {{ param }}"
+        }
+    }
+}

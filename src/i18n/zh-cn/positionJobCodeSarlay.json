@@ -1,0 +1,43 @@
+{
+    "esenadminwebhrmApp": {
+        "positionJobCodeSarlay" : {
+            "home": {
+                "title": "Position Job Code Sarlays",
+                "createLabel": "Create a new Position Job Code Sarlay",
+                "createOrEditLabel": "Create or edit a Position Job Code Sarlay"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Position Job Code Sarlay {{ id }}?"
+            },
+            "detail": {
+                "title": "Position Job Code Sarlay"
+            },
+            "jobCodeName": "Job Code Name",
+            "timeliness": "Timeliness",
+            "category": "Category",
+            "property": "Property",
+            "businessDept": "Business Dept",
+            "classesSeq": "Classes Seq",
+            "salaryPlanName": "Salary Plan Name",
+            "salaryGradeName": "Salary Grade Name",
+            "salaryScaleName": "Salary Scale Name",
+            "effectiveDate": "Effective Date",
+            "createdBy": "Created By",
+            "createdTime": "Created Time",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedTime": "Last Modified Time",
+            "delFlag": "Del Flag",
+            "version": "Version",
+            "position": "Position",
+            "salaryScale": "Salary Scale",
+            "jobCode": "Job Code"
+        }
+    },
+    "esenhrmApp": {
+        "positionJobCodeSarlay" : {
+            "created": "A new Position Job Code Sarlay is created with identifier {{ param }}",
+            "updated": "A Position Job Code Sarlay is updated with identifier {{ param }}",
+            "deleted": "A Position Job Code Sarlay is deleted with identifier {{ param }}"
+        }
+    }
+}
