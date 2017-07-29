@@ -28,6 +28,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent,
 } from './layouts';
+import {ModulesModule} from "./modules/modules.module";
 
 @Injectable()
 export class AuthRequestOptions extends BaseRequestOptions {
@@ -55,6 +56,7 @@ const LAZY_ROUTES = [
         FormsModule,
         BrowserModule,
         CommonModule,
+        ModulesModule,
         // NgbModule.forRoot(),
         BrowserAnimationsModule,
         // jhipster-needle-angular-add-module JHipster will add new module here

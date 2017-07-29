@@ -18,8 +18,8 @@
     <div style="width:9%;min-width:9%;margin-right:1.6%;">
       <select id="selectedStatus" class="form-control" name="selectedStatus" [(ngModel)]="selectedStatus" (change)="showStatus()">
                 <option value="1" selected>有效</option>
-                <option value="0">无效</option>       
-                <option value="">全部</option>       
+                <option value="0">无效</option>
+                <option value="">全部</option>
             </select>
     </div>
     <input type="text" class="form-control col-2" placeholder="请输入公司名称..." [(ngModel)]="searchNameOrCode" name="searchNameOrCode"
@@ -86,7 +86,7 @@
       </tbody>
     </table>
   </div>
-  <div *ngIf="companies && companies.length">
+  <div *ngIf="organizations && organizations.length">
     <div class="row justify-content-center">
       <!-- <div class="info jhi-item-count">
                 显示 {{itemsPerPage*(page - 1) +1}} - {{queryCount}} / {{totalItems}} 条

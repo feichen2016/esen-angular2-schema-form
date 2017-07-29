@@ -1,4 +1,4 @@
-<div *ngIf="organization">
+<div *ngIf="company">
     <esen-alert-error></esen-alert-error>
     <div class="form-group">
         <button type="button" class="btn btn-default" data-dismiss="modal" (click)="previousState()" style="float:right;margin-left:10px">
@@ -16,90 +16,90 @@
                 <div class="row">
                     <div class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.parent">Parent</span></div>
                     <div class="col-xs-6 col-md-4">
-                        <span>{{organization.parentName}}</span>
+                        <span>{{company.parentName}}</span>
                     </div>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.name">Name</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.name}}</span>
+                        <span>{{company.name}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.companyNo">Code</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.companyNo}}</span>
+                        <span>{{company.companyNo}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.legalPerson">legalPerson</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.legalPerson}}</span>
+                        <span>{{company.legalPerson}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.registeredCapital">registeredCapital</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.registeredCapital}}</span>
+                        <span>{{company.registeredCapital}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.scale">scale</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.scale}}</span>
+                        <span>{{company.scale}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.registrationAuthority">registrationAuthority</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.registrationAuthority}}</span>
+                        <span>{{company.registrationAuthority}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.webSite">webSite</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.webSite}}</span>
+                        <span>{{company.webSite}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.phone">phone</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.phone}}</span>
+                        <span>{{company.phone}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.email">email</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.email}}</span>
+                        <span>{{company.email}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.faxNumber">Fax</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.faxNumber}}</span>
+                        <span>{{company.faxNumber}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.location">location</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.location}}</span>
+                        <span>{{company.location}}</span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.properties">properties</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.properties}}</span>
+                        <span>{{company.properties}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.zipCode">zipCode</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.zipCode}}</span>
+                        <span>{{company.zipCode}}</span>
                     </dd>
                 </div>
                 <div class="row">
 
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.dateOfEstablishment">dateOfEstablishment</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span>{{organization.dateOfEstablishment | date:'y/M/d'}}</span>
+                        <span>{{company.dateOfEstablishment | date:'y/M/d'}}</span>
                     </dd>
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.status">status</span></dt>
                     <dd class="col-xs-6 col-md-4">
-                        <span *ngIf="organization.status =='1'">有效</span>
-                        <span *ngIf="organization.status =='0'">无效</span>
-                        <span *ngIf="organization.status ==null"></span>
+                        <span *ngIf="company.status =='1'">有效</span>
+                        <span *ngIf="company.status =='0'">无效</span>
+                        <span *ngIf="company.status ==null"></span>
                     </dd>
                 </div>
                 <div class="row">
                     <dt class="col-xs-6 col-md-1"><span jhiTranslate="esenadminwebhrmApp.organization.description">description</span></dt>
                     <dd class="col-xs-6 col-md-9">
-                        <span>{{organization.description}}</span>
+                        <span>{{company.description}}</span>
                     </dd>
                 </div>
             </ng-template>

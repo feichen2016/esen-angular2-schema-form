@@ -33,7 +33,8 @@ export class DemoListComponent implements OnInit {
      // this.schema = require('../../../mock-data/demolist.json');
     // this.model = require('../../../mock-data/demolistmodel.json');
     this.itemsPerPage = ITEMS_PER_PAGE;
-
+    this.page = 1;
+    this.previousPage = 1;
     this.routeData = this.activatedRoute.data.subscribe((data) => {
       if (data['pagingParams']) {
         this.page = data['pagingParams'].page;
