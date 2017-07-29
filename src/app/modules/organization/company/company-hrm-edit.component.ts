@@ -23,7 +23,7 @@ import { IMyDpOptions } from 'mydatepicker';
 
 export class CompanyHrmEditComponent implements OnInit, OnDestroy {
     editForm: FormGroup;
-    private myDatePickerOptions: IMyDpOptions = {
+    myDatePickerOptions: IMyDpOptions = {
         dateFormat: 'yyyy-mm-dd',
     };
     authorities: any[];

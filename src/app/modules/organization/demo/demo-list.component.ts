@@ -47,8 +47,8 @@ export class DemoListComponent implements OnInit {
     this.model = [];
     this.nameOrCode = 'TEST001';
     this.schemaService.getSchema(this.nameOrCode).subscribe(
-        (res: Response) => this.onSchemaSuccess(res, res.headers),
-        (res: Response) => this.onError(res.json()),
+        (res: any) => this.onSchemaSuccess(res),
+        (res: Response) => this.onError(res),
     );
     this.loadAll();
   }
@@ -82,7 +82,7 @@ export class DemoListComponent implements OnInit {
     }
   }
 
-  private onSchemaSuccess(data, headers) {
+  private onSchemaSuccess(data) {
     this.schema = data;
   }
   private onSuccess(data, headers) {
