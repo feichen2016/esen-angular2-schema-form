@@ -35,11 +35,8 @@ export const organizationRoute: Routes = [
     children: [  ...demoRoute, ...companyRoute],
     canActivate: [UserRouteAccessService],
   },
-  // { path: 'department', loadChildren: './department/department-hrm.module#DepartmentAdminModule' },
-  // { path: 'structure', loadChildren: './structure/structure-hrm.module#StructureAdminModule' },
-  // { path: 'plac', loadChildren: './place/place-hrm.module#PlaceAdminModule' },
-  // { path: 'position', loadChildren: './position/position-hrm.module#PositionAdminModule' },
-  // { path: 'post', loadChildren: './post/post-hrm.module#PostAdminModule' },
+  ...demoRoute,
+  ...companyRoute,
 ];
 
 // export const routing: ModuleWithProviders = RouterModule.forChild(organizationRoute);

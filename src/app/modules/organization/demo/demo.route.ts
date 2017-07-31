@@ -50,7 +50,7 @@ export const demoRoute: Routes = [
     canActivate: [UserRouteAccessService],
   },
     {
-        path: 'dynamic/:id',
+        path: 'detail/:id',
         component: DemoDetailComponent,
         resolve: {
             'pagingParams': DemoResolvePagingParams,

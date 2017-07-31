@@ -74,9 +74,9 @@ export class DemoListComponent implements OnInit {
 
   buttonClick(val: any) {
     if (val.name === 'detail') {
-      this.router.navigate(['modules/organization/dynamic', val.item.organizationId], this.router);
+      this.router.navigate(['modules/detail', val.item.organizationId]);
     } else if (val.name === 'edit') {
-      this.router.navigate(['modules/organization/edit', val.item.organizationId], this.router);
+      this.router.navigate(['modules/edit', val.item.organizationId]);
     } else {
       alert(val.name + '***' + val.item.organizationId);
     }
