@@ -21,7 +21,8 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
                 '/esenuaa',
                 '/esenaccount',
                 '/esenhrm',
-                '/metas'
+                '/metas',
+                '/api'
             ],
             target: 'http://192.168.1.9:9091',
             secure: false

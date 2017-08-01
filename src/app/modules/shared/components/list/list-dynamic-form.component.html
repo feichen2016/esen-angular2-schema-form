@@ -1,7 +1,7 @@
-<div class="general-list">
-  <div class="title" jhiTranslate="esenadminwebhrmApp.organization.home.title">Companys</div>
-  <div class="table-responsive" *ngIf="schema">
-    <table *ngIf="schema" class="table">
+<div class="general-list" *ngIf="schema">
+  <div class="title">{{schema.displayName}}</div>
+  <div class="table-responsive">
+    <table class="table">
       <thead>
         <tr>
             <th scope="row" *ngFor="let itemId of schema.orderIds" align="center">

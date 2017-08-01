@@ -7,6 +7,7 @@ import {SchemaService} from '../../shared/components/schema.service';
 @Component({
     selector: 'demo-detail',
     templateUrl: `./demo-detail.component.html`,
+    styleUrls: ['../general-detail.component.scss'],
 })
 export class DemoDetailComponent implements OnInit {
 

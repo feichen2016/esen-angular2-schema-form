@@ -14,7 +14,7 @@ import { SchemaService } from '../../shared/components/schema.service';
 import {JhipsterAppModule} from '../../../app.module';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {MdTabsModule} from '@angular/material';
+import {MdTabsModule } from '@angular/material';
 const ENTITY_STATES = [
   ...demoRoute,
 ];
