@@ -6,7 +6,7 @@ import { OrganizationHrmComponent } from './organization-hrm.component';
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { companyRoute } from './company/company-hrm.route';
-import {demoRoute} from "./demo/demo.route";
+import {demoRoute} from './demo/demo.route';
 
 @Injectable()
 export class OrganizationHrmResolvePagingParams implements Resolve<any> {

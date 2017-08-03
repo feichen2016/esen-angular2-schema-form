@@ -19,10 +19,6 @@ const ENTITY_STATES = [
         DynamicFormComponent,
         DynamicFormOptionComponent,
     ],
-    entryComponents: [
-        DynamicFormComponent,
-        DynamicFormOptionComponent,
-    ],
     providers: [
     ],
     exports: [

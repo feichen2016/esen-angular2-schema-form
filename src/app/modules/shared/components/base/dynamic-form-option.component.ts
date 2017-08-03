@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { OptionBase } from './option-base';
+import { SmartFormField} from './option-base';
 
 @Component({
   selector: 'df-option',
@@ -9,7 +9,13 @@ import { OptionBase } from './option-base';
   styleUrls: ['./dynamic.scss'],
 })
 export class DynamicFormOptionComponent {
-  @Input() question: OptionBase<any>;
+  @Input() option: SmartFormField<any>;
   @Input() form: FormGroup;
-  get isValid() { return this.form.controls[this.question.key].valid; }
+  @Output()
+  public callbackChange = new EventEmitter();
+  get isValid() { return this.form.controls[this.option.name].valid; }
+  get isPristine() { return this.form.controls[this.option.name].pristine; }
+  changeValue(name: any) {
+    this.callbackChange.emit({'key': name, 'value': this.form.controls[name].value});
+  }
 }

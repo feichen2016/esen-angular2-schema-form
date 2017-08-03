@@ -4,7 +4,8 @@
     <table class="table">
       <thead>
         <tr>
-            <th scope="row" *ngFor="let itemId of schema.orderIds" align="center">
+            <th *ngIf="schema.orderIds">序号</th>
+            <th *ngFor="let itemId of schema.orderIds" align="center">
                 {{showTitle(itemId)}}
             </th>
             <th *ngIf="schema.buttonIds"></th>
@@ -12,32 +13,33 @@
       </thead>
       <tbody>
         <tr *ngFor="let itemModel of model ; let i=index;">
-            <td *ngFor="let itemId of schema.orderIds">
-                {{ showLabel(itemModel[itemId], itemId) }}
-            </td>
-            <td *ngIf="schema.buttonIds">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle btn-operate" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                  操作
-                </button>
-                <div class="dropdown-menu div-operate" aria-labelledby="dropdownMenuButton">
-                  <a *ngFor="let buttonId of schema.buttonIds" class="dropdown-item operate-item" (click)="buttonClick(buttonId,itemModel)">{{showTitle(buttonId)}}</a>
-                </div>
+          <td *ngIf="itemModel">{{itemsPerPage*(page-1) +i +1}}</td>
+          <td *ngFor="let itemId of schema.orderIds">
+              {{ showLabel(itemModel[itemId], itemId) }}
+          </td>
+          <td *ngIf="schema.buttonIds">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle btn-operate" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                操作
+              </button>
+              <div class="dropdown-menu div-operate" aria-labelledby="dropdownMenuButton">
+                <a *ngFor="let buttonId of schema.buttonIds" class="dropdown-item operate-item" (click)="buttonClick(buttonId,itemModel)">{{showTitle(buttonId)}}</a>
               </div>
-                <!--<div class="btn-group" ngbDropdown>
-                    <button type="button" ngbDropdownToggle  class="btn btn-esen dropdown-toggle dropdown-toggle-split">
-                        操作
-                    </button>
-                    &lt;!&ndash;<button type="button" ngbDropdownToggle class="btn btn-esen dropdown-toggle dropdown-toggle-split">
-                        <span class="caret"></span>
-                        <span class="sr-only">Split button!</span>
-                    </button>&ndash;&gt;
-                    <div class="dropdown-menu dropdown-esen" aria-labelledby="dropdownBasic1">
-                        <button *ngFor="let buttonId of schema.buttonIds" class="dropdown-item"  (click)="buttonClick(buttonId,itemModel)">{{showTitle(buttonId)}}</button>
-                    </div>
-                </div>-->
-            </td>
+            </div>
+              <!--<div class="btn-group" ngbDropdown>
+                  <button type="button" ngbDropdownToggle  class="btn btn-esen dropdown-toggle dropdown-toggle-split">
+                      操作
+                  </button>
+                  &lt;!&ndash;<button type="button" ngbDropdownToggle class="btn btn-esen dropdown-toggle dropdown-toggle-split">
+                      <span class="caret"></span>
+                      <span class="sr-only">Split button!</span>
+                  </button>&ndash;&gt;
+                  <div class="dropdown-menu dropdown-esen" aria-labelledby="dropdownBasic1">
+                      <button *ngFor="let buttonId of schema.buttonIds" class="dropdown-item"  (click)="buttonClick(buttonId,itemModel)">{{showTitle(buttonId)}}</button>
+                  </div>
+              </div>-->
+          </td>
         </tr>
       </tbody>
     </table>

@@ -1,17 +1,19 @@
-<div [formGroup]="form" class="display-flex form-group col-12">
-  <label class="col-4 right" [attr.for]="question.key">{{question.label}}</label>
+<form [formGroup]="form">
+  <div class="form-group row">
+    <label class="col-form-label right col-4" [attr.for]="option.name"><span *ngIf="!option.nullable">*</span>{{option.displayName}}</label>
 
-  <div class="col-8" [ngSwitch]="question.controlType">
+    <div class="col-8" [ngSwitch]="option.inputType">
 
-    <input *ngSwitchCase="'textbox'" [formControlName]="question.key"
-            [id]="question.key" [type]="question.type">
+      <input *ngSwitchCase="'TEXT'" class="form-control"  [formControlName]="option.name"
+              [id]="option.name" [type]="option.inputType" (change)="changeValue(option.name)">
 
-    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
-      <option *ngFor="let opt of question.options" [value]="opt.value">{{opt.key}}</option>
-    </select>
+      <select [id]="option.name" class="form-control" *ngSwitchCase="'SELECT'" [formControlName]="option.name">
+        <option *ngFor="let opt of option.dictionaries" [value]="opt.value">{{opt.name}}</option>
+      </select>
 
-    <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+      <div class="custom-alert" [hidden]="isValid || isPristine">{{option.displayName}}必须填写</div>
+    </div>
+
   </div>
-
-</div>
+</form>
 

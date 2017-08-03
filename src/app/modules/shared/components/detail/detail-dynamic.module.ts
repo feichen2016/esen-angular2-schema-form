@@ -13,9 +13,6 @@ const ENTITY_STATES = [
     declarations: [
         DetailDynamicFormComponent,
     ],
-    entryComponents: [
-        DetailDynamicFormComponent,
-    ],
     providers: [
     ],
     exports: [

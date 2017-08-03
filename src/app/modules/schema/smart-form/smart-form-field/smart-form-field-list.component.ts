@@ -1,17 +1,16 @@
 
 import {ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
-import { DemoService } from './demo.service';
-import { DepartmentQueryModel } from './demo.model';
+import { SmartFormService } from './smart-form.service';
 import { ITEMS_PER_PAGE } from '../../../shared/constants/pagination.constants';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SchemaService} from '../../shared/components/schema.service';
 @Component({
-  selector: 'esen-sf-demo-app',
-  templateUrl: './demo-list.component.html',
+  selector: 'esen-smart-form-field-list',
+  templateUrl: './smart-form-field-list.component.html',
   /*encapsulation: ViewEncapsulation.None,*/
  /* providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],*/
 })
-export class DemoListComponent implements OnInit {
+export class SmartFormFieldListComponent implements OnInit {
 
   routeData: any;
   schema: any;
@@ -21,16 +20,14 @@ export class DemoListComponent implements OnInit {
   previousPage: any;
   page: any;
   nameOrCode: string;
-  queryModel: DepartmentQueryModel;
+  queryModel: any;
 
   constructor(
-      private demoService: DemoService,
+      private smartFormFieldService: SmartFormFieldService,
       private activatedRoute: ActivatedRoute,
       private router: Router,
       private schemaService: SchemaService,
     ) {
-     // this.schema = require('../../../mock-data/demolist.json');
-    // this.model = require('../../../mock-data/demolistmodel.json');
     this.itemsPerPage = ITEMS_PER_PAGE;
     this.page = 1;
     this.previousPage = 1;
@@ -44,7 +41,7 @@ export class DemoListComponent implements OnInit {
 
   ngOnInit() {
     this.model = [];
-    this.nameOrCode = 'TEST001';
+    this.nameOrCode = 'SF001';
     this.schemaService.getSchema(this.nameOrCode).subscribe(
         (res: any) => this.onSchemaSuccess(res),
         (res: Response) => this.onError(res),
@@ -53,11 +50,10 @@ export class DemoListComponent implements OnInit {
   }
 
   loadAll() {
-    this.queryModel = new DepartmentQueryModel();
-    // this.queryModel.nameOrCode = '';
+    this.queryModel = {};
     this.queryModel.page = this.page - 1;
     this.queryModel.size = this.itemsPerPage;
-    this.demoService.query(this.queryModel).subscribe(
+    this.smartFormService.query(this.queryModel).subscribe(
         (res) => this.onSuccess(res.json(), res.headers),
         (res: Response) => this.onError(res.json()),
     );
@@ -73,9 +69,9 @@ export class DemoListComponent implements OnInit {
 
   buttonClick(val: any) {
     if (val.name === 'detail') {
-      this.router.navigate(['modules/detail', val.item.organizationId]);
+      this.router.navigate(['modules/smart-form/detail', val.item.id]);
     } else if (val.name === 'edit') {
-      this.router.navigate(['modules/edit', val.item.organizationId]);
+      this.router.navigate(['modules/smart-form/edit', val.item.id]);
     } else {
       alert(val.name + '***' + val.item.organizationId);
     }

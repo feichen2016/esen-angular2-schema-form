@@ -11,7 +11,7 @@
     <div class="title" id="myDepartmentLabel">创建或更新</div>
     <md-tab-group>
       <md-tab label="{{schema.displayName}}">
-          <dynamic-form *ngIf="schema.fields" [schema]="schema" [model]="model"></dynamic-form>
+          <dynamic-form *ngIf="schema.fields" [schema]="schema" [model]="model" (callbackChange)="changeModel($event)"></dynamic-form>
       </md-tab>
     </md-tab-group>
   </div>

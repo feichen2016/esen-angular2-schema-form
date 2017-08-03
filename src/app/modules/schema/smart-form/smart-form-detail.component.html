@@ -1,0 +1,18 @@
+
+<div class="general-detail">
+  <div class="inner">
+    <div class="save-group">
+      <button type="button" class="cancel-btn" data-dismiss="modal" (click)="previousState()">
+        <span class="fa fa-ban"></span>&nbsp;<span >取消</span>
+      </button>
+    </div>
+    <div class="title">表单管理</div>
+    <md-tab-group>
+      <md-tab label="表单信息">
+        <div class="content">
+            <detail-dynamic-form [model]="model" [schema]="schema"></detail-dynamic-form>
+        </div>
+      </md-tab>
+    </md-tab-group>
+  </div>
+</div>

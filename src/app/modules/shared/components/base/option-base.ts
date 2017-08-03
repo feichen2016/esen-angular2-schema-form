@@ -1,30 +1,9 @@
-export class OptionBase<T>{
-  value: T;
-  defaultValue: string;
-  key: string;
-  label: string;
-  required: boolean;
-  order: number;
-  controlType: string;
 
-  constructor(options: {
-      value?: T,
-      defaultValue?: string,
-      key?: string,
-      label?: string,
-      required?: boolean,
-      order?: number,
-      controlType?: string,
-    } = {}) {
-    this.value = options.value;
-    this.defaultValue = options.defaultValue || '';
-    this.key = options.key || '';
-    this.label = options.label || '';
-    this.required = !!options.required;
-    this.order = options.order === undefined ? 1 : options.order;
-    this.controlType = options.controlType || '';
-  }
-}
+import {
+  DataSourceType,
+  InputType,
+  ValueType,
+} from './';
 
 export class SmartForm {
   name: string;
@@ -34,32 +13,32 @@ export class SmartForm {
   xmlTemplate: string;
   orderIds: string[];
   buttonIds: string[];
-  fields: SmartFormField[];
+  fields: SmartFormField<any>[];
   constructor(options: {
-                name?: string;
-                displayName?: string;
-                description?: string;
-                jsonTemplate?: string;
-                xmlTemplate?: string;
-                orderIds?: string[];
-                buttonIds?: string[];
-                fields?: SmartFormField[];
-              } = { }) {
-      this.name = options.name;
-      this.displayName = options.displayName;
-      this.description = options.description;
-      this.jsonTemplate = options.jsonTemplate;
-      this.xmlTemplate = options.xmlTemplate;
-      this.orderIds = options.orderIds;
-      this.buttonIds = options.buttonIds;
-      this.fields = options.fields;
+    name?: string;
+    displayName?: string;
+    description?: string;
+    jsonTemplate?: string;
+    xmlTemplate?: string;
+    orderIds?: string[];
+    buttonIds?: string[];
+    fields?: SmartFormField<any>[];
+  } = { }) {
+    this.name = options.name;
+    this.displayName = options.displayName;
+    this.description = options.description;
+    this.jsonTemplate = options.jsonTemplate;
+    this.xmlTemplate = options.xmlTemplate;
+    this.orderIds = options.orderIds;
+    this.buttonIds = options.buttonIds;
+    this.fields = options.fields;
   }
 }
 
-export class SmartFormField {
-  value?: string;
+export class SmartFormField<T> {
+  value: T;
   code: string;
-  name?: string;
+  name: string;
   displayName: string;
   description: string;
   dataSourceType: DataSourceType;
@@ -83,32 +62,32 @@ export class SmartFormField {
   sort: number;
   dictionaries: Dictionary[];
   constructor(options: {
-                value?: string;
-                code?: string;
-                name?: string;
-                displayName?: string;
-                description?: string;
-                dataSourceType?: DataSourceType;
-                dataSource?: string;
-                valueType?: ValueType;
-                defaultValue?: string;
-                inputType?: InputType;
-                row?: number;
-                rowspan?: number;
-                col?: number;
-                colspan?: number;
-                primaryKey?: false;
-                nullable?: boolean;
-                creatable?: boolean;
-                updatable?: boolean;
-                sizeMin?: number;
-                sizeMax?: number;
-                valueMin?: string;
-                valueMax?: string;
-                validator?: string;
-                sort?: number;
-                dictionaries?: Dictionary[];
-              } = {}) {
+    value?: T;
+    code?: string;
+    name?: string;
+    displayName?: string;
+    description?: string;
+    dataSourceType?: DataSourceType;
+    dataSource?: string;
+    valueType?: ValueType;
+    defaultValue?: string;
+    inputType?: InputType;
+    row?: number;
+    rowspan?: number;
+    col?: number;
+    colspan?: number;
+    primaryKey?: false;
+    nullable?: boolean;
+    creatable?: boolean;
+    updatable?: boolean;
+    sizeMin?: number;
+    sizeMax?: number;
+    valueMin?: string;
+    valueMax?: string;
+    validator?: string;
+    sort?: number;
+    dictionaries?: Dictionary[];
+  } = {}) {
     this.value = options.value;
     this.code = options.code;
     this.name = options.name;
@@ -138,53 +117,19 @@ export class SmartFormField {
 }
 
 export class Dictionary {
-    code: string;
-    value: string;
-    name: string;
-    constructor(
-      options: {
-        code?: string,
-        value?: string,
-        name?: string
-                } = {}
-                ) {
-      this.code = options.code || '';
-      this.value = options.value || '';
-      this.name = options.name || '';
-    }
+  code: string;
+  value: string;
+  name: string;
+  constructor(
+    options: {
+      code?: string,
+      value?: string,
+      name?: string
+              } = {}
+              ) {
+    this.code = options.code || '';
+    this.value = options.value || '';
+    this.name = options.name || '';
+  }
 }
 
-const enum DataSourceType {
-  'ORM',
-  'DICTIONARY',
-  'LIST',
-  'QUERY'
-}
-
-const enum ValueType {
-  'STRING',
-  'BOOLEAN',
-  'OPTION',
-  'MULTIOPTION',
-  'LOCALDATE',
-  'DATE',
-  'DATETIME',
-  'INTEGER',
-  'FLOAT'
-}
-
-const enum InputType {
-  'HIDDEN',
-  'INPUT',
-  'TEXT',
-  'PASSWORD',
-  'DATE',
-  'DATETIME',
-  'TIME',
-  'RADIO',
-  'CHECKBOX',
-  'MULTICHECKBOX',
-  'SELECT',
-  'MULTISELECT',
-  'BUTTON'
-}

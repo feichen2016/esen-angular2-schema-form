@@ -10,7 +10,7 @@
      if (field) {
          let label = value || field.defaultValue || '';
          if ('OPTION' === field.valueType) {
-             field.dictionaries.forEach(option => {
+             field.dictionaries.forEach((option) => {
                  if (label === option.value) {
                      label = option.name;
                  }

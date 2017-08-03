@@ -1,16 +1,19 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { ResolvePagingParams } from './utils.service';
 import { OrganizationAdminModule } from './organization/organization-hrm.module';
+import { SchemaAdminModule } from './schema/schema.module';
 
 @NgModule({
     imports: [
+       SchemaAdminModule,
        OrganizationAdminModule,
-        // EsenadminwebHrmSharedCityDropdownModule,
-        /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
     entryComponents: [],
-    providers: [],
+    providers: [
+      ResolvePagingParams,
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class EntityModule { }
