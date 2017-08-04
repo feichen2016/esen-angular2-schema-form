@@ -1,23 +1,23 @@
 import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { SmartFormService } from './smart-form.service';
-import { SchemaService } from '../../shared/components/schema.service';
+import { SmartFormFieldService } from './smart-form-field.service';
+import { SchemaService } from '../../../shared/components/schema.service';
 import { ActivatedRoute } from '@angular/router';
-import { SmartFormModel } from './smart-form.model';
+import { SmartFormFieldModel } from './smart-form-field.model';
 import { JhiEventManager } from 'ng-jhipster';
 
 @Component({
-  selector: 'esen-smart-form-edit',
-  templateUrl: `./smart-form-edit.component.html`,
-  styleUrls: ['../general-edit.component.scss'],
+  selector: 'esen-smart-form-field-edit',
+  templateUrl: `./smart-form-field-edit.component.html`,
+  styleUrls: ['../../general-edit.component.scss'],
 })
-export class SmartFormEditComponent implements OnInit {
+export class SmartFormFieldEditComponent implements OnInit {
 
   editId: any;
   schema: any;
   model: any;
   isSaving: boolean;
   constructor(
-    private smartFormService: SmartFormService,
+    private smartFormFieldService: SmartFormFieldService,
     private schemaService: SchemaService,
     private route: ActivatedRoute,
     private eventManager: JhiEventManager,
@@ -29,24 +29,24 @@ export class SmartFormEditComponent implements OnInit {
       this.editId = params['id'];
       this.load(this.editId);
     });
-    this.schema = this.schemaService.getSchema('SF002').subscribe(
+    this.schema = this.schemaService.getSchema('SFF002').subscribe(
       (res: any) => this.onSchemaSuccess(res),
       (res: Response) => this.onError(res),
     );
   }
   load(id: any) {
     if (id) {
-      this.smartFormService.find(id).subscribe((model) => {
+      this.smartFormFieldService.find(id).subscribe((model) => {
         this.model = model;
       });
     } else {
-      this.model = new SmartFormModel();
+      this.model = new SmartFormFieldModel();
     }
   }
 
   save() {
     this.isSaving = true;
-       this.smartFormService.save(this.model)
+       this.smartFormFieldService.save(this.model)
          .subscribe((res: String) =>
            this.onSaveSuccess((res)), (res: Response) => this.onSaveError(res));
   }

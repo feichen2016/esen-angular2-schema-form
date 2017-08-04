@@ -9,6 +9,7 @@ import { MdTabsModule } from '@angular/material';
 import { MyDatePickerModule } from 'mydatepicker';
 import { SchemaComponent } from './schema.component';
 import { SmartFormAdminModule } from './smart-form/smart-form.module';
+import { SmartFormFieldAdminModule } from './smart-form/smart-form-field/smart-form-field.module';
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import { SmartFormAdminModule } from './smart-form/smart-form.module';
         RouterModule,
         MdTabsModule,
         SmartFormAdminModule,
+        SmartFormFieldAdminModule,
     ],
     declarations: [
         SchemaComponent,

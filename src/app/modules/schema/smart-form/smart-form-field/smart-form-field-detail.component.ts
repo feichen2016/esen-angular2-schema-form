@@ -1,14 +1,14 @@
 import { Component, OnInit, } from '@angular/core';
-import { SmartFormService } from './smart-form.service';
 import { ActivatedRoute } from '@angular/router';
-import {SchemaService} from '../../shared/components/schema.service';
+import { SchemaService } from '../../../shared/components/schema.service';
+import { SmartFormFieldService } from './smart-form-field.service';
 
 @Component({
-    selector: 'esen-smart-form-detail',
-    templateUrl: `./smart-form-detail.component.html`,
-    styleUrls: ['../general-detail.component.scss'],
+    selector: 'esen-smart-form-field-detail',
+    templateUrl: `./smart-form-field-detail.component.html`,
+    styleUrls: ['../../general-detail.component.scss'],
 })
-export class SmartFormDetailComponent implements OnInit {
+export class SmartFormFieldDetailComponent implements OnInit {
 
     schema: any;
     model: any;
@@ -17,15 +17,14 @@ export class SmartFormDetailComponent implements OnInit {
     private subscription: any;
     queryModel: any;
 
-    constructor(private smartFormService: SmartFormService,
-                private schemaService: SchemaService,
-                private route: ActivatedRoute,
+    constructor(private smartFormFieldService: SmartFormFieldService,
+        private schemaService: SchemaService,
+        private route: ActivatedRoute,
     ) {
     }
 
     ngOnInit() {
-        this.nameOrCode = 'TEST002';
-        this.schemaService.getSchema(this.nameOrCode).subscribe(
+        this.schemaService.getSchema('SFF002').subscribe(
             (res: Response) => this.onSchemaSuccess(res, res.headers),
             (res: Response) => this.onError(res.json()),
         );
@@ -35,7 +34,7 @@ export class SmartFormDetailComponent implements OnInit {
     }
 
     load(id) {
-        this.smartFormService.find(id).subscribe((item) => {
+        this.smartFormFieldService.find(id).subscribe((item) => {
             this.model = item;
         });
     }

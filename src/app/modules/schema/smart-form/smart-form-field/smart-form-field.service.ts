@@ -5,26 +5,26 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { JhiDateUtils } from 'ng-jhipster';
-import { SmartFormModel } from './smart-form.model';
+import { SmartFormFieldModel } from './smart-form-field.model';
 
 @Injectable()
-export class SmartFormService {
+export class SmartFormFieldService {
 
-    private testSchemaUrl = 'metas/api/smart-forms';
-    private resourceUrl = 'metas/api/smart-forms/list-info';
-
-    private resourceFindUrl = 'metas/api/smart-forms/detail';
+    private resourceUrl = 'metas/api/smart-form-fields/list-info';
+    private resourceFindUrl = 'metas/api/smart-form-fields/detail';
+    private resourceSaveUrl = 'metas/api/smart-form-fields/save';
+    private resourceDeleteUrl = 'metas/api/smart-form-fields/delete';
 
     constructor(private http: Http, private dateUtils: JhiDateUtils) {
     }
 
     query(req?: any): Observable<Response> {
-        const copy: SmartFormModel = Object.assign({}, req);
+        const copy: SmartFormFieldModel = Object.assign({}, req);
         return this.http.post(this.resourceUrl, copy)
             .map((res: any) => this.convertResponse(res));
     }
 
-    find(id: any): Observable<SmartFormModel> {
+    find(id: any): Observable<SmartFormFieldModel> {
         return this.http.get(`${this.resourceFindUrl}/${id}`).map((res: Response) => {
             const jsonResponse = res.json();
             jsonResponse.effectiveDate = this.dateUtils
@@ -37,25 +37,20 @@ export class SmartFormService {
         });
     }
 
+    save(item: SmartFormFieldModel): Observable<string> {
+        const copy: SmartFormFieldModel = Object.assign({}, item);
+        return this.http.post(this.resourceSaveUrl, copy).map((res: Response) => {
+            return res.json();
+        });
+    }
+    delete(id: any): Observable<Response> {
+        const copy: SmartFormFieldModel = Object.assign({}, id);
+        return this.http.post(`${this.resourceDeleteUrl}/${id}`, copy);
+    }
     private convertResponse(res: any): any {
         const jsonResponse = res.json();
-        /*for (let i = 0; i < jsonResponse.length; i++) {
-            jsonResponse[i].effectiveDate = this.dateUtils
-                .convertLocalDateFromServer(jsonResponse[i].effectiveDate);
-            jsonResponse[i].lastModifiedTime = this.dateUtils
-                .convertDateTimeFromServer(jsonResponse[i].lastModifiedTime);
-            jsonResponse[i].createdTime = this.dateUtils
-                .convertDateTimeFromServer(jsonResponse[i].createdTime);
-        }*/
         res._body = jsonResponse;
         return res;
-    }
-
-    getModel(): any {
-        return {firstName: 'fei chen',
-            brave: 'Solid',
-
-        };
     }
 
 }

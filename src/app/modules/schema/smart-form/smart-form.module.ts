@@ -15,6 +15,9 @@ import { ResolvePagingParams } from '../../utils.service';
 import { SmartFormEditComponent } from './smart-form-edit.component';
 import { SmartFormDetailComponent } from './smart-form-detail.component';
 import { SmartFormListComponent } from './smart-form-list.component';
+import { OpenModalService } from '../../modal.service';
+import { SmartFormDeleteComponent } from './smart-form-delete.component';
+import { SmartFormFieldAdminModule } from './smart-form-field/smart-form-field.module';
 
 @NgModule({
   imports: [
@@ -25,12 +28,17 @@ import { SmartFormListComponent } from './smart-form-list.component';
     FormsModule,
     CommonModule,
     MdTabsModule,
+    SmartFormFieldAdminModule,
     // RouterModule.forChild(ENTITY_STATES),
   ],
   exports: [
     SmartFormListComponent
   ],
+  entryComponents: [
+    SmartFormDeleteComponent,
+  ],
   declarations: [
+    SmartFormDeleteComponent,
     SmartFormListComponent,
     SmartFormDetailComponent,
     SmartFormEditComponent,
@@ -39,6 +47,7 @@ import { SmartFormListComponent } from './smart-form-list.component';
     SmartFormService,
     customHttpProvider(),
     ResolvePagingParams,
+    OpenModalService,
     SchemaService,
 ],
 })

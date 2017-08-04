@@ -1,2 +1,9 @@
-<list-dynamic-form [model]="model" [schema]="schema" [collectionSize]="totalItems" [page]="page" (callback)="loadPage($event)" (callbackClick)="buttonClick($event)"></list-dynamic-form>
-
+<div class="inner">
+    <div class="form-group save-group">
+      <button type="button" class="submit-btn" [routerLink]="['../../../smart-form-field/create']">
+        <span>新建</span>
+      </button>
+    </div>
+    <div *ngIf="schema" class="title" id="myDepartmentLabel">{{schema.displayName}}</div>
+    <list-dynamic-form [model]="model" [schema]="schema" [collectionSize]="totalItems" [page]="page" (callback)="loadPage($event)" (callbackClick)="buttonClick($event)"></list-dynamic-form>
+</div>

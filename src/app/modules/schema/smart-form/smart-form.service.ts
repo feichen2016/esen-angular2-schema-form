@@ -10,10 +10,10 @@ import { SmartFormModel } from './smart-form.model';
 @Injectable()
 export class SmartFormService {
 
-    private testSchemaUrl = 'metas/api/smart-forms';
     private resourceUrl = 'metas/api/smart-forms/list-info';
-
     private resourceFindUrl = 'metas/api/smart-forms/detail';
+    private resourceSaveUrl = 'metas/api/smart-forms/save';
+    private resourceDeleteUrl = 'metas/api/smart-forms/delete';
 
     constructor(private http: Http, private dateUtils: JhiDateUtils) {
     }
@@ -37,25 +37,20 @@ export class SmartFormService {
         });
     }
 
+    save(item: SmartFormModel): Observable<string> {
+        const copy: SmartFormModel = Object.assign({}, item);
+        return this.http.post(this.resourceSaveUrl, copy).map((res: Response) => {
+            return res.json();
+        });
+    }
+    delete(id: any): Observable<Response> {
+        const copy: SmartFormModel = Object.assign({}, id);
+        return this.http.post(`${this.resourceDeleteUrl}/${id}`, copy);
+    }
     private convertResponse(res: any): any {
         const jsonResponse = res.json();
-        /*for (let i = 0; i < jsonResponse.length; i++) {
-            jsonResponse[i].effectiveDate = this.dateUtils
-                .convertLocalDateFromServer(jsonResponse[i].effectiveDate);
-            jsonResponse[i].lastModifiedTime = this.dateUtils
-                .convertDateTimeFromServer(jsonResponse[i].lastModifiedTime);
-            jsonResponse[i].createdTime = this.dateUtils
-                .convertDateTimeFromServer(jsonResponse[i].createdTime);
-        }*/
         res._body = jsonResponse;
         return res;
-    }
-
-    getModel(): any {
-        return {firstName: 'fei chen',
-            brave: 'Solid',
-
-        };
     }
 
 }

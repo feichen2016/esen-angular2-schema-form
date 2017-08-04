@@ -8,20 +8,21 @@ import { SmartFormListComponent } from './smart-form-list.component';
 import { SmartFormDetailComponent } from './smart-form-detail.component';
 import { SmartFormEditComponent } from './smart-form-edit.component';
 import { ResolvePagingParams } from '../../utils.service';
+import { smartFormFieldRoutes } from './smart-form-field/smart-form-field.route';
 
 export const smartFormRoutes: Routes = [
     {
-    path: 'smart-form-list',
-    component: SmartFormListComponent,
-    resolve: {
-      'pagingParams': ResolvePagingParams,
+        path: 'smart-form-list',
+        component: SmartFormListComponent,
+        resolve: {
+            'pagingParams': ResolvePagingParams,
+        },
+        data: {
+            authorities: ['ROLE_USER'],
+            pageTitle: 'esenadminwebhrmApp.organization.home.title',
+        },
+        canActivate: [UserRouteAccessService],
     },
-    data: {
-        authorities: ['ROLE_USER'],
-        pageTitle: 'esenadminwebhrmApp.organization.home.title',
-    },
-    canActivate: [UserRouteAccessService],
-  },
     {
         path: 'smart-form/detail/:id',
         component: SmartFormDetailComponent,
@@ -46,5 +47,18 @@ export const smartFormRoutes: Routes = [
         },
         canActivate: [UserRouteAccessService],
     },
+    {
+        path: 'smart-form/create',
+        component: SmartFormEditComponent,
+        resolve: {
+            'pagingParams': ResolvePagingParams,
+        },
+        data: {
+            authorities: ['ROLE_USER'],
+            pageTitle: 'esenadminwebhrmApp.organization.home.title',
+        },
+        canActivate: [UserRouteAccessService],
+    },
+    ...smartFormFieldRoutes,
 ];
 

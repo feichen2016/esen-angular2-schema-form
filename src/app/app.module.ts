@@ -28,7 +28,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent,
 } from './layouts';
-import {ModulesModule} from "./modules/modules.module";
+import {ModulesModule} from './modules/modules.module';
 
 @Injectable()
 export class AuthRequestOptions extends BaseRequestOptions {

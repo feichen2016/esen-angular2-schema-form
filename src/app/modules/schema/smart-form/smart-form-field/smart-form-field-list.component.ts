@@ -1,17 +1,19 @@
 
-import {ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
-import { SmartFormService } from './smart-form.service';
-import { ITEMS_PER_PAGE } from '../../../shared/constants/pagination.constants';
-import {ActivatedRoute, Router} from '@angular/router';
-import {SchemaService} from '../../shared/components/schema.service';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation, Input } from '@angular/core';
+import { SmartFormFieldService } from './smart-form-field.service';
+import { ITEMS_PER_PAGE } from '../../../../shared/index';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SchemaService } from '../../../shared/components/schema.service';
+import { OpenModalService } from '../../../modal.service';
+import { SmartFormFieldDeleteComponent } from './smart-form-field-delete.component';
 @Component({
   selector: 'esen-smart-form-field-list',
   templateUrl: './smart-form-field-list.component.html',
-  /*encapsulation: ViewEncapsulation.None,*/
- /* providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],*/
+  styleUrls: ['../../general-list.component.scss'],
 })
 export class SmartFormFieldListComponent implements OnInit {
 
+  @Input() formId: any;
   routeData: any;
   schema: any;
   model: any;
@@ -23,11 +25,12 @@ export class SmartFormFieldListComponent implements OnInit {
   queryModel: any;
 
   constructor(
-      private smartFormFieldService: SmartFormFieldService,
-      private activatedRoute: ActivatedRoute,
-      private router: Router,
-      private schemaService: SchemaService,
-    ) {
+    private smartFormFieldService: SmartFormFieldService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private schemaService: SchemaService,
+    private openModalService: OpenModalService,
+  ) {
     this.itemsPerPage = ITEMS_PER_PAGE;
     this.page = 1;
     this.previousPage = 1;
@@ -41,21 +44,22 @@ export class SmartFormFieldListComponent implements OnInit {
 
   ngOnInit() {
     this.model = [];
-    this.nameOrCode = 'SF001';
+    this.nameOrCode = 'SFF001';
     this.schemaService.getSchema(this.nameOrCode).subscribe(
-        (res: any) => this.onSchemaSuccess(res),
-        (res: Response) => this.onError(res),
+      (res: any) => this.onSchemaSuccess(res),
+      (res: Response) => this.onError(res),
     );
     this.loadAll();
   }
 
   loadAll() {
     this.queryModel = {};
+    this.queryModel.formId = this.formId;
     this.queryModel.page = this.page - 1;
     this.queryModel.size = this.itemsPerPage;
-    this.smartFormService.query(this.queryModel).subscribe(
-        (res) => this.onSuccess(res.json(), res.headers),
-        (res: Response) => this.onError(res.json()),
+    this.smartFormFieldService.query(this.queryModel).subscribe(
+      (res) => this.onSuccess(res.json(), res.headers),
+      (res: Response) => this.onError(res.json()),
     );
   }
 
@@ -69,11 +73,12 @@ export class SmartFormFieldListComponent implements OnInit {
 
   buttonClick(val: any) {
     if (val.name === 'detail') {
-      this.router.navigate(['modules/smart-form/detail', val.item.id]);
+      this.router.navigate(['modules/smart-form-field/detail', val.item.id]);
     } else if (val.name === 'edit') {
-      this.router.navigate(['modules/smart-form/edit', val.item.id]);
+      this.router.navigate(['modules/smart-form-field/edit', val.item.id]);
     } else {
-      alert(val.name + '***' + val.item.organizationId);
+      const modalRef = this.openModalService.openModal(SmartFormFieldDeleteComponent);
+      modalRef.componentInstance.id = val.item.id;
     }
   }
 
@@ -85,7 +90,7 @@ export class SmartFormFieldListComponent implements OnInit {
     this.model = data;
   }
   private onError(error) {
-    alert('出错啦');
+    alert('接口异常');
   }
 }
 

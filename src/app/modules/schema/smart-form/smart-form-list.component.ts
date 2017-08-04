@@ -1,14 +1,16 @@
 
-import {ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { SmartFormService } from './smart-form.service';
 import { ITEMS_PER_PAGE } from '../../../shared/constants/pagination.constants';
-import {ActivatedRoute, Router} from '@angular/router';
-import {SchemaService} from '../../shared/components/schema.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SchemaService } from '../../shared/components/schema.service';
+import { OpenModalService } from '../../modal.service';
+import { SmartFormDeleteComponent } from './smart-form-delete.component';
+import { JhiEventManager } from 'ng-jhipster';
 @Component({
   selector: 'esen-smart-form-list',
   templateUrl: './smart-form-list.component.html',
-  /*encapsulation: ViewEncapsulation.None,*/
- /* providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],*/
+  styleUrls: ['../general-list.component.scss'],
 })
 export class SmartFormListComponent implements OnInit {
 
@@ -23,11 +25,13 @@ export class SmartFormListComponent implements OnInit {
   queryModel: any;
 
   constructor(
-      private smartFormService: SmartFormService,
-      private activatedRoute: ActivatedRoute,
-      private router: Router,
-      private schemaService: SchemaService,
-    ) {
+    private smartFormService: SmartFormService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private schemaService: SchemaService,
+    private openModalService: OpenModalService,
+    private eventManager: JhiEventManager,
+  ) {
     this.itemsPerPage = ITEMS_PER_PAGE;
     this.page = 1;
     this.previousPage = 1;
@@ -43,10 +47,11 @@ export class SmartFormListComponent implements OnInit {
     this.model = [];
     this.nameOrCode = 'SF001';
     this.schemaService.getSchema(this.nameOrCode).subscribe(
-        (res: any) => this.onSchemaSuccess(res),
-        (res: Response) => this.onError(res),
+      (res: any) => this.onSchemaSuccess(res),
+      (res: Response) => this.onError(res),
     );
     this.loadAll();
+    this.registerChangeInForms();
   }
 
   loadAll() {
@@ -54,8 +59,8 @@ export class SmartFormListComponent implements OnInit {
     this.queryModel.page = this.page - 1;
     this.queryModel.size = this.itemsPerPage;
     this.smartFormService.query(this.queryModel).subscribe(
-        (res) => this.onSuccess(res.json(), res.headers),
-        (res: Response) => this.onError(res.json()),
+      (res) => this.onSuccess(res.json(), res.headers),
+      (res: Response) => this.onError(res.json()),
     );
   }
 
@@ -73,8 +78,13 @@ export class SmartFormListComponent implements OnInit {
     } else if (val.name === 'edit') {
       this.router.navigate(['modules/smart-form/edit', val.item.id]);
     } else {
-      alert(val.name + '***' + val.item.organizationId);
+      const modalRef = this.openModalService.openModal(SmartFormDeleteComponent);
+      modalRef.componentInstance.id = val.item.id;
     }
+  }
+
+  registerChangeInForms() {
+    this.eventManager.subscribe('smartFormListModification', (response) => this.loadAll());
   }
 
   private onSchemaSuccess(data) {

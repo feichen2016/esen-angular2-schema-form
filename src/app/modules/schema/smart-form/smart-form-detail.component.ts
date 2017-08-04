@@ -24,7 +24,7 @@ export class SmartFormDetailComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.nameOrCode = 'TEST002';
+        this.nameOrCode = 'SF002';
         this.schemaService.getSchema(this.nameOrCode).subscribe(
             (res: Response) => this.onSchemaSuccess(res, res.headers),
             (res: Response) => this.onError(res.json()),
@@ -39,6 +39,7 @@ export class SmartFormDetailComponent implements OnInit {
             this.model = item;
         });
     }
+
     private onSchemaSuccess(data, headers) {
         this.schema = data;
     }
