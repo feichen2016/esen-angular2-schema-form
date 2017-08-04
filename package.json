@@ -1,9 +1,13 @@
 {
-  "name": "esen-schema-form",
-  "version": "0.0.0",
+  "name": "esen-angular2-schema-form",
+  "version": "0.0.1",
   "description": "Description for angular2 schema",
   "private": true,
   "license": "UNLICENSED",
+  "repository" :  
+  { "type" : "git"  
+  , "url" : "https://github.com/feichen2016/esen-angular2-schema-form.git"  
+  },
   "cacheDirectories": [
     "node_modules"
   ],
